@@ -1,4 +1,4 @@
-package com.dsaNAlgo.dsa.Arrays.twoPointers;
+package arrays.twoPointers;
 import java.lang.*;
 
 public class RainTappingProblem {
