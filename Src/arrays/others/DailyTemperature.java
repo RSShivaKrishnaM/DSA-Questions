@@ -19,7 +19,7 @@ public class DailyTemperature {
         // for(int curr = 0 ; curr < temperatures.length-1; curr++){
             count = 1;
             for(int i = curr+1; i < temperatures.length ; i++){
-                    if(temperatures[curr]<temperatures[i] || count==(temperatures.lenght-i)) {
+                    if(temperatures[curr]<temperatures[i] || count==(temperatures.length-i)) {
                         res[curr] = count;
                         curr++;
                         count=1;
