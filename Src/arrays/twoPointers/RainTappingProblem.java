@@ -1,5 +1,4 @@
 package arrays.twoPointers;
-import java.lang.*;
 
 public class RainTappingProblem {
 
