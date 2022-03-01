@@ -3,51 +3,29 @@ import java.lang.*;
 
 public class RainTappingProblem {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-	
-	public void Solution() {
-		
-	}
-}
-
-class Solution {
-    public int maximumWealth(int[][] accounts) {
-               
-    	int maxWealth = 0;
-    	
-        for(int i = 0; i < accounts.length; i++){
-            int wealthSum = 0;
-        	for(int j = 0; j < accounts[0].length; j++){
-                wealthSum += accounts[i][j];
-            }
-        	if(wealthSum > maxWealth) 
-        		maxWealth = wealthSum;
-        }
-        
-        return maxWealth;
-        
-    }
-}
-
-class Solution {
-    public int maximumWealth(int[][] accounts) {
-        int max = Integer.MIN_VALUE;
-        for (int i = 0;i<accounts.length;i++){
-            int c = 0;
-            for (int j = 0;j<accounts[i].length;j++){
-                c = c + accounts[i][j];
-            }
-            if(c > max){
-                max = c;
-            }
-        }
-        return max;
-
-
-
-        
-    }
+	 public int trap(int[] height) {
+	        if(height.length==0 || height.length == 1){
+	            return 0;
+	        }
+	        int[] left = new int[height.length];
+	        int[] right = new int[height.length];
+	        
+	        int prev = 0;
+	        for(int i = 0 ; i < height.length; i++){
+	            left[i] = Math.max(height[i], prev);
+	            prev = left[i];
+	        }
+	        
+	        prev = 0;
+	        for(int j = height.length -1 ; j >= 0 ; j--){
+	            right[j] = Math.max(height[j], prev);
+	            prev = right[j];
+	        }
+	        
+	        int res = 0;
+	        for( int i = 0 ; i< height.length; i++){
+	            res += Math.min(left[i], right[i]) - height[i];
+	        }
+	        return res;
+	    }
 }
