@@ -1,5 +1,6 @@
 package heap;
 
+import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class KthLargestEleInAStream {
@@ -56,7 +57,7 @@ public class KthLargestEleInAStream {
 	        
 	        this.k = k;
 	        pq = new PriorityQueue<>();
-	        
+	        Arrays.stream(nums).forEach(num->System.out.println(num));
 	        for(int num : nums)
 	            add(num);
 	    }
