@@ -5,8 +5,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
-import trees.traversals.BinaryTreePreOrderTraversal.TreeNode;
-
 public class BinaryTreeLevelOrderTraversal {
 	public class TreeNode {
 	      int val;
