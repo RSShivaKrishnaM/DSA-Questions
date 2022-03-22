@@ -24,4 +24,9 @@ public class IPv4AndIPv6Validation {
         }
         return "Neither";
     }
+	
+	public static void main(String[] args) {
+		IPv4AndIPv6Validation ipv4 = new IPv4AndIPv6Validation();
+		System.out.println(ipv4.validIPAddress("2001:0db8:85a3:0:0:8A2E:0370:7334"));
+	}
 }
