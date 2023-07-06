@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class CheckAnangram {
+public class CheckAnagram {
     public boolean isAnagram(String s, String t) {
         // create a map with character and count O(n)
         // create a sec map with character and count O(n)
