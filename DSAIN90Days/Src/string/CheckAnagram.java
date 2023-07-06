@@ -26,11 +26,9 @@ public class CheckAnagram {
         boolean isAnagram = true;
         if (sCharCountMap.size() == tCharCountMap.size()) {
             Set<Map.Entry<Character, Integer>> sCharCountEntrySet = sCharCountMap.entrySet();
-            Iterator<Map.Entry<Character, Integer>> it = sCharCountEntrySet.iterator();
-            while (it.hasNext()) {
-                Map.Entry<Character, Integer> entry = it.next();
+            for (Map.Entry<Character, Integer> entry : sCharCountEntrySet) {
                 if (tCharCountMap.containsKey(entry.getKey())) {
-                    if (entry.getValue() != tCharCountMap.get(entry.getKey())) {
+                    if (!Objects.equals(entry.getValue(), tCharCountMap.get(entry.getKey()))) {
                         isAnagram = false;
                         break;
                     }
@@ -59,11 +57,7 @@ public class CheckAnagram {
         s = new String(tempArrayS);
         t = new String(tempArrayT);
 
-        if (s.contains(t) && t.contains(s)) {
-            return true;
-        } else {
-            return false;
-        }
+        return s.contains(t) && t.contains(s);
     }
 
     public boolean isAnagram3(String s, String t) {
