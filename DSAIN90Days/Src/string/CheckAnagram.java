@@ -9,7 +9,6 @@ public class CheckAnagram {
         // compare both the maps and see if every entry are same or not O(n)
         // compare the sizes of both the maps
         // iterate over one map and keep checking the keys count in both the maps
-        //
 
         Map<Character, Integer> sCharCountMap = new HashMap<>();
         for (char ch : s.toCharArray()) {
