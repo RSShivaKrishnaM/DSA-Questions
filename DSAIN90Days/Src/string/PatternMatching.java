@@ -1,9 +1,6 @@
 package string;
 
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class PatternMatching {
 
@@ -47,6 +44,52 @@ public class PatternMatching {
             }
             return matchedWords;
         }
+
+    static String encodeString(String str)
+    {
+        HashMap<Character, Integer> map = new HashMap<>();
+        String res = "";
+        int i = 0;
+
+        // for each character in given string
+        char ch;
+        for (int j = 0; j < str.length(); j++) {
+            ch = str.charAt(j);
+
+            // If the character is occurring for the first
+            // time, assign next unique number to that char
+            if (!map.containsKey(ch))
+                map.put(ch, i++);
+
+            // append the number associated with current
+            // character into the output string
+            res += map.get(ch);
+        }
+
+        return res;
+    }
+
+    //better solution
+    public List<String> findAndReplacePattern2(String[] words, String pattern) {
+
+        // len is length of the pattern
+        int len = pattern.length();
+
+        //Create a list of string to store the ans
+        List<String> matches = new ArrayList<>();
+
+        // encode the string
+        String hash = encodeString(pattern);
+
+        // for each word in the dictionary array
+        for (String word : words) {
+            //If both have same size and same hash store the word
+            if (word.length() == len
+                    && encodeString(word).equals(hash))
+                matches.add(word);
+        }
+        return matches;
+    }
 
     public static void main(String[] args) {
         String[] strArra = {"abc","cde","zzz"};
