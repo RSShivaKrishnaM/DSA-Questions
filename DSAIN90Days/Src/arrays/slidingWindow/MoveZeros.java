@@ -1,6 +1,10 @@
 package arrays.slidingWindow;
 
-public class MoveZeros {
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
+public class MoveZeros { // altimetrix
 		//283. Move Zeroes
 	   public void moveZeroes(int[] nums) {
 	        //iterate over array elements
@@ -45,4 +49,28 @@ public class MoveZeros {
 	            nums[i]=0;
 	        }
 	   }
+
+	public static List<Integer> moveZerosToEnd3(List<Integer> inpuList){
+
+		List<Integer> nonZeroList = new ArrayList<>();
+
+		Iterator<Integer> it = inpuList.iterator();
+		while(it.hasNext()){
+			int curr = it.next();
+			if(curr!=0){
+				nonZeroList.add(curr);
+			}
+		}
+
+		List<Integer> resList = new ArrayList<>(inpuList.size());
+
+		resList.addAll(nonZeroList);
+		int diff = inpuList.size() - nonZeroList.size();
+
+		while(diff-- >0) {
+			resList.add(0);
+		}
+
+		return resList;
+	}
 }

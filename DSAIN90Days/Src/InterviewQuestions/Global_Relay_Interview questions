@@ -1,0 +1,17 @@
+
+
+1. Check if give newPasswords and Set of passowrds is anagram or not
+2. Java Questions
+   2.1) Volatile keyword
+   2.2) Dependency injection
+   2.3) Dependency inversion
+   2.4) equals and hashcode
+   2.5) synchronized keyword (with static methods and non-static methods)
+   2.6) How garbage collection works
+   2.7) What are SOLID principles
+   2.8) Stack memory and heap memory :  the stack is used to store the order of method execution
+                                        and local variables while the heap memory stores the objects
+                                        and it uses dynamic memory allocation and deallocation.
+
+
+

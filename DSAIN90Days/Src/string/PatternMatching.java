@@ -92,6 +92,9 @@ public class PatternMatching {
     }
 
     public static void main(String[] args) {
+            Set<Integer> set = new HashSet<>();
+            set.add(1);
+
         String[] strArra = {"abc","cde","zzz"};
         String  pattern = "aaa";
         List<String> matchedWords = findAndReplacePattern(strArra, pattern);

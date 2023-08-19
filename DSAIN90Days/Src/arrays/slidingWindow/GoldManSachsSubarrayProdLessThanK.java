@@ -1,6 +1,8 @@
 package arrays.slidingWindow;
 
-public class GoldManSachsSubarrayProdLessThanK {
+public class
+
+GoldManSachsSubarrayProdLessThanK {
 	public static int numSubarrayProductLessThanK(int[] nums, int k) {
 	       // Sliding window technique
 	        if(k<=1) return 0;
