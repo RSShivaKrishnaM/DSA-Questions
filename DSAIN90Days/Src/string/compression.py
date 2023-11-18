@@ -14,4 +14,4 @@ def compress(chars: list[str]):
    
 
 if __name__ == "__main__":
-    compress(['a','a','b','c','d'])
+    compress(["a","a","b","b","c","c","c"])
