@@ -1,4 +1,4 @@
-package javaExcercises;
+package Z_Java_Interview_Questions.javaExcercises;
 
 import java.util.Objects;
 

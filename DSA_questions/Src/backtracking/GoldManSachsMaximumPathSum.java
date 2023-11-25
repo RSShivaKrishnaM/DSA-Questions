@@ -1,4 +1,4 @@
-package arrays.backtracking;
+package backtracking;
 
 public class GoldManSachsMaximumPathSum {
 	public static int N = 4, M = 6;
