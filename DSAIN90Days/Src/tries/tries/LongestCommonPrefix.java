@@ -1,6 +1,36 @@
 package tries;
 
+
+// https://leetcode.com/problems/longest-common-prefix/description/
 public class LongestCommonPrefix {
+
+	// Alphabet size (# of symbols)
+	static final int ALPHABET_SIZE = 26;
+
+	static TrieNode root;
+
+	// trie node
+	static class TrieNode {
+		TrieNode[] children = new TrieNode[ALPHABET_SIZE];
+
+		// isEndOfWord is true if the node represents
+		// end of a word
+		boolean isEndOfWord;
+
+		TrieNode() {
+			isEndOfWord = false;
+			for (int i = 0; i < ALPHABET_SIZE; i++)
+				children[i] = null;
+		}
+	};
+
+
+	
+
+	public static void main(String[] args) {
+		String[] temp= {"flower","flow","flight"};
+		longestCommonPrefix(temp);
+	}
 
 	public static String longestCommonPrefix(String[] strs) {
 
@@ -25,32 +55,8 @@ public class LongestCommonPrefix {
 				count++;
 			}
 		}
-		
-//     
-//      while(children!=null)
-//      Arrays.stream(temp.children).
 		return null;
 	}
-
-	// Alphabet size (# of symbols)
-	static final int ALPHABET_SIZE = 26;
-
-	// trie node
-	static class TrieNode {
-		TrieNode[] children = new TrieNode[ALPHABET_SIZE];
-
-		// isEndOfWord is true if the node represents
-		// end of a word
-		boolean isEndOfWord;
-
-		TrieNode() {
-			isEndOfWord = false;
-			for (int i = 0; i < ALPHABET_SIZE; i++)
-				children[i] = null;
-		}
-	};
-
-	static TrieNode root;
 
 	// If not present, inserts key into trie
 	// If the key is prefix of trie node,
@@ -74,8 +80,4 @@ public class LongestCommonPrefix {
 		pCrawl.isEndOfWord = true;
 	}
 
-	public static void main(String[] args) {
-		String[] temp= {"flower","flow","flight"};
-		longestCommonPrefix(temp);
-	}
 }
