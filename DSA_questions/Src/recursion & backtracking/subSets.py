@@ -1,21 +1,21 @@
 from typing import List
 class Solution:
-    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-        def wrapper(ind: int, nums: List[int], res: List[List[int]], subList: List[int], N: int):
-            if(ind == N):
-                res.append(subList)
-                subList.clear()
-                return
-            subList.append(nums[ind])
-            wrapper(ind+1, nums, res, subList, N)
-            subList.remove(nums[ind])
-            wrapper(ind+1, nums, res, subList, N)
-        
-        res = [[]]
-        subList = []
-        wrapper(0, nums, res, subList, len(nums))    
-        return res
-            
+    def subsetsWithDup(self, ind : int, nums: List[int], ds: List[int],
+                       ans: List[List[int]]):
+        ans.append(ds.copy())      
+        for i in range(ind, len(nums)):  
+            if(i!=ind & nums[i]==nums[i-1]): 
+                continue
+            ds.append(nums[i])
+            self.subsetsWithDup(self, i+1, nums, ds, ans)
+            ds.remove(nums[i])
+                
 if __name__ == "__main__":
     sol = Solution
-    print(sol.subsetsWithDup(sol, [1,3,1,3]))
+    nums = [1,2,2]
+    nums.sort()
+    ans = []
+    ds = []
+    print(sol.subsetsWithDup(sol, 0, nums, ds, ans))
+    ans.sort()
+    print(ans)
