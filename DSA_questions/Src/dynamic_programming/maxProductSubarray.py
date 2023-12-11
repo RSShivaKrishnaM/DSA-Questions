@@ -1,4 +1,5 @@
 class Solution:
+    # https://leetcode.com/problems/maximum-product-subarray/
     def maxProduct(self, nums: List[int]) -> int:
         res = max(nums)
         curMax, curMin = 1,1
