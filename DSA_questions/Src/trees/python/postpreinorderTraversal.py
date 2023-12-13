@@ -35,7 +35,8 @@ class Solution:
             postorder(root.left)
             postorder(root.right)
             res.append(root.val)
-        
+        inorder(root)
+        preorder(root)
         postorder(root)
         return res
                 
