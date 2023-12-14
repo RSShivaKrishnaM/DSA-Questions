@@ -2,17 +2,17 @@
 
 1. Check if give newPasswords and Set of passowrds is anagram or not
 2. Java Questions
-   2.1) Volatile keyword
+   2.1) Volatile keyword : "https://jenkov.com/tutorials/java-concurrency/volatile.html#:~:text=The%20Java%20volatile%20keyword%20is%20intended%20to%20address%20variable%20visibility,read%20directly%20from%20main%20memory."
    2.2) Dependency injection
    2.3) Dependency inversion
-   2.4) equals and hashcode
+   2.4) equals and hashcode : "https://www.digitalocean.com/community/tutorials/java-equals-hashcode"
    2.5) synchronized keyword (with static methods and non-static methods)
    2.6) How garbage collection works
-   2.7) What are SOLID principles
+   2.7) What are SOLID principles : "https://www.javatpoint.com/solid-principles-java"
    2.8) Stack memory and heap memory :  the stack is used to store the order of method execution
                                         and local variables while the heap memory stores the objects
                                         and it uses dynamic memory allocation and deallocation.
-   2.9) Immutable : How to make a class immutable
+   2.9) Immutable : How to make a class immutable : "https://www.geeksforgeeks.org/create-immutable-class-java/"
    3.0) REST : What do you mean by rest api's
 
 
