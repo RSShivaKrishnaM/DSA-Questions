@@ -25,8 +25,9 @@ def rightView(node: TreeNode, level: int, ds:[]):
     rightView(node.rightChild, level+1, ds)
     rightView(node.leftChild, level+1, ds)
     
-def bottomView(node: TreeNode, ans:[]):
-    
+
+def bottomView(node: TreeNode, ans:[]): 
+
     if(node == None):
         return
       
