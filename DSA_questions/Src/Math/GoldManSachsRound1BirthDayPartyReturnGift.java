@@ -1,3 +1,4 @@
+//https://leetcode.com/discuss/interview-question/625140/goldman-sachs-oa-2020-array-burst-problem-birthday-party
 package MathProblems;
 
 public class GoldManSachsRound1BirthDayPartyReturnGift {
