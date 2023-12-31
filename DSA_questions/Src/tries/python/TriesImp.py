@@ -1,6 +1,30 @@
-from DSA_questions.Src.tries.python.TrieNode import TrieNode
+# from python.TrieNode import TrieNode
 
 
+# from DSA_questions.Src.tries.python.TrieNode import TrieNode
+
+
+
+
+class TrieNode:
+    """A node in the trie structure"""
+
+    def __init__(self, char):
+        # the character stored in this node
+        self.char = char
+
+        # whether this can be the end of a word
+        self.is_end = False
+
+        # a counter indicating how many times a word is inserted
+        # (if this node's is_end is True)
+        self.counter = 0
+
+        # a dictionary of child nodes
+        # keys are characters, values are nodes
+        self.children = {}
+        
+        
 class Trie(object):
     """The trie object"""
 
@@ -70,3 +94,12 @@ class Trie(object):
 
         # Sort the results in reverse order and return
         return sorted(self.output, key=lambda x: x[1], reverse=True)
+    
+if __name__ == "__main__":
+    t = Trie()
+    t.insert("was")
+    t.insert("word")
+    t.insert("war")
+    t.insert("what")
+    t.insert("where")
+    print(t.query("wh"))
