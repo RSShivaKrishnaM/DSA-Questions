@@ -1,11 +1,5 @@
 # from python.TrieNode import TrieNode
 
-
-# from DSA_questions.Src.tries.python.TrieNode import TrieNode
-
-
-
-
 class TrieNode:
     """A node in the trie structure"""
 
@@ -95,6 +89,10 @@ class Trie(object):
         # Sort the results in reverse order and return
         return sorted(self.output, key=lambda x: x[1], reverse=True)
     
+    def countDistinctWords(str1 : str):
+        print(str1)
+        
+    
 if __name__ == "__main__":
     t = Trie()
     t.insert("was")
@@ -102,4 +100,7 @@ if __name__ == "__main__":
     t.insert("war")
     t.insert("what")
     t.insert("where")
+    
     print(t.query("wh"))
+    
+    t.countDistinctWords("wish")
